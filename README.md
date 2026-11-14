@@ -9,7 +9,7 @@ _Description_
 - ..
 
 Using xampp to manage php
-Switch to docker?
+TODO: Switch from XAMPP to docker
 
 ## Requirements
 
