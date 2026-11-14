@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
+import './App.css'
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import CreateData from "./components/CreateData";
+import EditData from "./components/EditData";
+import ListData from "./components/ListData";
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <p>EQ Monitor Main Page</p>
+      <div className={"top-nav-wrapper"}>
+        <p>Header</p>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className={"content-wrapper"}>
+        <div className="body-wrapper">
+          <Router>
+            <Routes>
+              <Route exact path="/" />
+              <Route path="/CreateData" element={<CreateData />} />
+              <Route path="/EditData" element={<EditData />} />
+              
+              <Route path="/ListData" element={<ListData />} />
+
+            </Routes>
+          </Router>
+        </div>
+
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
