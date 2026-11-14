@@ -2,6 +2,15 @@
 
 _Description_
 
+## Plan:
+- Create links, routing, components in react
+- Create databases in MySQL
+- Create API requests in PHP/Laravel
+- ..
+
+Using xampp to manage php
+Switch to docker?
+
 ## Requirements
 
 
